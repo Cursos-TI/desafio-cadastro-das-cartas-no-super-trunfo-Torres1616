@@ -66,7 +66,7 @@ int main() {
 
         printf("\n\n===== CARTA 1 =====\n");
         printf("Estado: %c\n" , estado1);
-        printf("Codígo: %s\n" , codigocarta1);
+        printf("Código: %s\n" , codigocarta1);
         printf("Nome da Cidade: %s\n" , cidade1);
         printf("População: %f\n" , populacao1);
         printf("Área(KM): %.3f\n" , area1); //Utilização de ".3" para especificar as casa decimais depois do ponto.
@@ -76,11 +76,11 @@ int main() {
 
         printf("\n===== CARTA 2 =====\n");
         printf("Estado: %c\n" , estado2);
-        printf("Codígo: %s\n" , codigocarta2);
+        printf("Código: %s\n" , codigocarta2);
         printf("Nome da Cidade: %s\n" , cidade2);
         printf("População: %f\n" , populacao2);
         printf("Área(KM): %.3f\n" , area2); //Utilização de ".3" para especificar as casa decimais depois do ponto.
-        printf("C: %.3f\n" , pib2); //Utilização de ".3" para especificar as casa decimais depois do ponto.
+        printf("PIB($): %.3f\n" , pib2); //Utilização de ".3" para especificar as casa decimais depois do ponto.
         printf("Número de Pontos Turísticos: %d\n" , turistico2);
 
     return 0; //Finalização do Progarma. 
