@@ -70,8 +70,8 @@ int main() {
     pibper2 = pib2 /populacao2;
     inversoDensidade1 = (-1/densidade1);
     inversoDensidade2 = (-1/densidade2);
-    superPoder1 = (populacao1 + area1 + pib1 + turistico1 + inversoDensidade1);
-    superPoder2 = (populacao2 + area2 + pib2 + turistico2 + inversoDensidade2);
+    superPoder1 = ((float)populacao1 + area1 + pib1 + turistico1 + inversoDensidade1);
+    superPoder2 = ((float)populacao2 + area2 + pib2 + turistico2 + inversoDensidade2);
 
 //1. Saida de dados no terminal, após Preenchimento.
 //2. Os dados preenchidos antes agora irão sair organizados e formarão os dados da carta.
@@ -81,50 +81,50 @@ int main() {
         printf("Estado: %c\n" , estado1);
         printf("Código: %s\n" , codigocarta1);
         printf("Nome da Cidade: %s\n" , cidade1);
-        printf("População: %lu\n" , populacao1);
-        printf("Área(KM): %.2f\n" , area1); //Utilização de ".3" para especificar as casa decimais depois do ponto.
-        printf("PIB($): %.2f\n" , pib1); //Utilização de ".3" para especificar as casa decimais depois do ponto.
+        printf("População: %lu hab\n" , populacao1);
+        printf("Área: %.2f km²\n" , area1); //Utilização de ".3" para especificar as casa decimais depois do ponto.
+        printf("PIB: R$%.2f\n" , pib1); //Utilização de ".3" para especificar as casa decimais depois do ponto.
         printf("Número de Pontos Turísticos: %d\n" , turistico1);
         printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-        printf("PIB per Capita: %.2f reais\n", pibper1);
-        printf("Super Poder: %lu\n", superPoder1);
+        printf("PIB per Capita: R$%.2f\n", pibper1);
+        printf("Super Poder: %.2f SP\n", superPoder1);
 
         printf("\n===== CARTA 2 =====\n");
         printf("Estado: %c\n" , estado2);
         printf("Código: %s\n" , codigocarta2);
         printf("Nome da Cidade: %s\n" , cidade2);
-        printf("População: %lu\n" , populacao2);
-        printf("Área(KM): %.2f\n" , area2); //Utilização de ".3" para especificar as casa decimais depois do ponto.
-        printf("PIB($): %.2f\n" , pib2); //Utilização de ".3" para especificar as casa decimais depois do ponto.
+        printf("População: %lu hab\n" , populacao2);
+        printf("Área: %.2f km²\n" , area2); //Utilização de ".3" para especificar as casa decimais depois do ponto.
+        printf("PIB: R$%.2f\n" , pib2); //Utilização de ".3" para especificar as casa decimais depois do ponto.
         printf("Número de Pontos Turísticos: %d\n" , turistico2);
         printf("Densidade Populacional: %f hab/km²\n", densidade2);
-        printf("PIB per Capita: %f reais\n", pibper2);
-        printf("Super Poder: %lu\n", superPoder2);
+        printf("PIB per Capita: R$%f\n", pibper2);
+        printf("Super Poder: %.2f SP\n", superPoder2);
    
 //Comparação de cartas
 printf("\n\n===== CARTA 1 =====\n");
-printf("\n%s\n", cidade2);
-printf("\nResultado do Embate entre as Cartas\n");
-printf("\nVecendor(1)==Perdedor(0)\n");
-printf("População: %d\n", (populacao1 > populacao2));
-printf("Área(KM): %d\n", (area1 > area2));
-printf("PIB($): %d\n", (pib1 > pib2));
-printf("Número de Pontos Turísticos: %d\n", (turistico1 > turistico2));
-printf("Densidade Populacional: %d\n", (inversoDensidade1 > inversoDensidade2));
-printf("PIB per Capita: %d\n", (pibper1 > pibper2));
-printf("Super Poder: %d\n", (superPoder1 > superPoder2));
+printf("\n***Resultado do Embate entre as Cartas***\n");
+printf("\nCidade: %s\n", cidade1);
+printf("\nGANHOU(1)  PERDEU(0)\n");
+printf("\nPopulação: `%d´\n", (populacao1 > populacao2));
+printf("Área: `%d´\n", (area1 > area2));
+printf("PIB: `%d´\n", (pib1 > pib2));
+printf("Número de Pontos Turísticos: `%d´\n", (turistico1 > turistico2));
+printf("Densidade Populacional: `%d´\n", (inversoDensidade1 > inversoDensidade2));
+printf("PIB per Capita: `%d´\n", (pibper1 > pibper2));
+printf("Super Poder: `%d´\n", (superPoder1 > superPoder2));
 
-printf("\n\n===== CARTA 2 =====\n");
-printf("\n%s\n", cidade2);
-printf("\nResultado do Embate entre as Cartas\n");
-printf("\nVecendor(1)  Perdedor(0)\n");
-printf("População: %d\n", (populacao2 > populacao1));
-printf("Área(KM): %d\n", (area2 > area1));
-printf("PIB($): %d\n", (pib2 > pib1));
-printf("Número de Pontos Turísticos: %d\n", (turistico2 > turistico1));
-printf("Densidade Populacional: %d\n", (inversoDensidade2 > inversoDensidade1));
-printf("PIB per Capita: %d\n", (pibper2 > pibper1));
-printf("Super Poder: %d\n", (superPoder2 > superPoder1));
+printf("\n\n===== CARTA 1 =====\n");
+printf("\n***Resultado do Embate entre as Cartas***\n");
+printf("\nCidade: %s\n", cidade2);
+printf("\nGANHOU(1)  PERDEU(0)\n");
+printf("\nPopulação: `%d´\n", (populacao2 > populacao1));
+printf("Área: `%d´\n", (area2 > area1));
+printf("PIB: `%d´\n", (pib2 > pib1));
+printf("Número de Pontos Turísticos: `%d´\n", (turistico2 > turistico1));
+printf("Densidade Populacional: `%d´\n", (inversoDensidade2 > inversoDensidade1));
+printf("PIB per Capita: `%d´\n", (pibper2 > pibper1));
+printf("Super Poder: `%d´\n", (superPoder2 > superPoder1));
 
 
 return 0; //Finalização do Progarma. 
