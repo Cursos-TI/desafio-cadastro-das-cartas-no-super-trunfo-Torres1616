@@ -100,31 +100,53 @@ int main() {
         printf("Densidade Populacional: %f hab/km²\n", densidade2);
         printf("PIB per Capita: R$%f\n", pibper2);
         printf("Super Poder: %.2f SP\n", superPoder2);
-   
-//Comparação de cartas
-printf("\n\n===== CARTA 1 =====\n");
-printf("\n***Resultado do Embate entre as Cartas***\n");
-printf("\nCidade: %s\n", cidade1);
-printf("\nGANHOU(1)  PERDEU(0)\n");
-printf("\nPopulação: `%d´\n", (populacao1 > populacao2));
-printf("Área: `%d´\n", (area1 > area2));
-printf("PIB: `%d´\n", (pib1 > pib2));
-printf("Número de Pontos Turísticos: `%d´\n", (turistico1 > turistico2));
-printf("Densidade Populacional: `%d´\n", (inversoDensidade1 > inversoDensidade2));
-printf("PIB per Capita: `%d´\n", (pibper1 > pibper2));
-printf("Super Poder: `%d´\n", (superPoder1 > superPoder2));
 
-printf("\n\n===== CARTA 1 =====\n");
+//Declaração de Condição para Embate
+
 printf("\n***Resultado do Embate entre as Cartas***\n");
-printf("\nCidade: %s\n", cidade2);
-printf("\nGANHOU(1)  PERDEU(0)\n");
-printf("\nPopulação: `%d´\n", (populacao2 > populacao1));
-printf("Área: `%d´\n", (area2 > area1));
-printf("PIB: `%d´\n", (pib2 > pib1));
-printf("Número de Pontos Turísticos: `%d´\n", (turistico2 > turistico1));
-printf("Densidade Populacional: `%d´\n", (inversoDensidade2 > inversoDensidade1));
-printf("PIB per Capita: `%d´\n", (pibper2 > pibper1));
-printf("Super Poder: `%d´\n", (superPoder2 > superPoder1));
+printf("     \n%s X %s\n", cidade1, cidade2);
+
+    printf("\nPopulação Mais numerosa?\n");
+if (populacao1 > populacao2){
+    printf("Carta 1 Ganhou!!\n");
+}else{
+    printf("Carta 2 Ganhou!!\n");}
+
+    printf("\nMaior Area por km²?\n");
+if (area1 > area2){
+    printf("Carta 1 Ganhou!!\n");
+}else{
+    printf("Carta 2 Ganhou!!\n");}
+
+    printf("\nMaior Pib?\n");
+if (pib1 > pib2){
+    printf("Carta 1 Ganhou!!\n");
+}else{
+    printf("Carta 2 Ganhou!!\n");}
+
+    printf("\nMaior Número de Pontos Turísticos?\n");
+if (turistico1 > turistico2){
+    printf("Carta 1 Ganhou!!\n");
+}else{
+    printf("Carta 2 Ganhou!!\n");}
+
+    printf("\nMenor Densidade Populacional?\n");
+if (inversoDensidade1 < inversoDensidade2){
+    printf("Carta 1 Ganhou!!\n");
+}else{
+    printf("Carta 2 Ganhou!!\n");}
+
+    printf("\nMaior Pib per Capita?\n");
+if (pibper1 > pibper2){
+    printf("Carta 1 Ganhou!!\n");
+}else{
+    printf("Carta 2 Ganhou!!\n");}
+
+    printf("\nSuper Poder?\n");
+if (superPoder1 > superPoder2){
+    printf("Carta 1 Ganhou!!\n");
+}else{
+    printf("Carta 2 Ganhou!!\n");}
 
 
 return 0; //Finalização do Progarma. 
