@@ -3,6 +3,7 @@
 //Criação das variaveis Carta 1 e Carta 2.
 
 int main() {
+    int opcao, regras;
     char estado1, estado2;
     char codigocarta1[20], codigocarta2[20];
     char cidade1[20], cidade2[20];
@@ -17,7 +18,14 @@ int main() {
 //2. O ser irá preencher os dados com suas devidas informações, referentes aos seus campos.
 //2.1. Printf: Determina o que está sendo pedido, de deverá ser preenchido no terminal;
 //2.2 Scanf: Determina a entrada dos dados e o seu tipo.
+    printf("=== Seja Bem Vindo ao Super Trunfo ===\n");
+    printf("Iniciar - DIGITE 1\n");
+    printf("Regras - DIGITE 2\n");
+    scanf("%d", &opcao);
     
+    switch (opcao)
+    {
+    case 1:
     printf("Carta: 1\n");
     printf("Insira uma letra de A - H representando o estado: ");
         scanf("%c", &estado1);
@@ -60,22 +68,7 @@ int main() {
         scanf("%f", &pib2); //Em caso de valores com mais de um ponto "." digitar somente um (Ex: 4.234.234 = 4.234234).
 
     printf("Quantidade de pontos Turísticos: ");
-        scanf("%d", &turistico2); //Digitar valores sem ponto ou virgula.
-
-
-//Calculo Densidade e Pib
-    densidade1 = populacao1 / area1;
-    densidade2 = populacao2 / area2;
-    pibper1 = pib1 /populacao1;
-    pibper2 = pib2 /populacao2;
-    inversoDensidade1 = (-1/densidade1);
-    inversoDensidade2 = (-1/densidade2);
-    superPoder1 = ((float)populacao1 + area1 + pib1 + turistico1 + inversoDensidade1);
-    superPoder2 = ((float)populacao2 + area2 + pib2 + turistico2 + inversoDensidade2);
-
-//1. Saida de dados no terminal, após Preenchimento.
-//2. Os dados preenchidos antes agora irão sair organizados e formarão os dados da carta.
-//2.1 Printf: Responsável por adiministrar a saída dos dados no terminal, antes preenchidos.
+        scanf("%d", &turistico2);
 
         printf("\n\n===== CARTA 1 =====\n");
         printf("Estado: %c\n" , estado1);
@@ -100,11 +93,36 @@ int main() {
         printf("Densidade Populacional: %f hab/km²\n", densidade2);
         printf("PIB per Capita: R$%f\n", pibper2);
         printf("Super Poder: %.2f SP\n", superPoder2);
+        break;
+    
+    default:
+        break;
+    }
+   
+
+//Calculo Densidade e Pib
+    densidade1 = populacao1 / area1;
+    densidade2 = populacao2 / area2;
+    pibper1 = pib1 /populacao1;
+    pibper2 = pib2 /populacao2;
+    inversoDensidade1 = (-1/densidade1);
+    inversoDensidade2 = (-1/densidade2);
+    superPoder1 = ((float)populacao1 + area1 + pib1 + turistico1 + inversoDensidade1);
+    superPoder2 = ((float)populacao2 + area2 + pib2 + turistico2 + inversoDensidade2);
+
+//1. Saida de dados no terminal, após Preenchimento.
+//2. Os dados preenchidos antes agora irão sair organizados e formarão os dados da carta.
+//2.1 Printf: Responsável por adiministrar a saída dos dados no terminal, antes preenchidos.
+
 
 //Declaração de Condição para Embate
+printf("\n***Fight***\n");
+printf("Escolha o seu Atributo");
+
+
 
 printf("\n***Resultado do Embate entre as Cartas***\n");
-printf("     \n%s X %s\n", cidade1, cidade2);
+printf("\n   %s X %s  \n", cidade1, cidade2);
 
     printf("\nPopulação Mais numerosa?\n");
 if (populacao1 > populacao2){
