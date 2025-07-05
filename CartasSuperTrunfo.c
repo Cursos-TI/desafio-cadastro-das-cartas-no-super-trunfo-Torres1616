@@ -86,7 +86,7 @@ int main() {
 
     
         printf("\n\n===== CARTA 1 =====\n");
-        printf("Estado: %c\n" , estado1);
+        printf("Inicial: %c\n" , estado1);
         printf("Código: %s\n" , codigocarta1);
         printf("Nome do País: %s\n" , pais1);
         printf("População: %lu hab\n" , populacao1);
@@ -98,7 +98,7 @@ int main() {
         printf("Super Poder: %.2f SP\n", superPoder1);
 
         printf("\n===== CARTA 2 =====\n");
-        printf("Estado: %c\n" , estado2);
+        printf("Inicial: %c\n" , estado2);
         printf("Código: %s\n" , codigocarta2);
         printf("Nome do País: %s\n" , pais2);
         printf("População: %lu hab\n" , populacao2);
@@ -109,39 +109,131 @@ int main() {
         printf("PIB per Capita: R$%f\n", pibper2);
         printf("Super Poder: %.2f SP\n", superPoder2);
 
-        printf("\n***Fight***\n");
-printf("Escolha o seu Atributo(1 à 7)");
+        printf("\n ===Fight=== \n");
+printf("\nEscolha de 1 a 7: \n");
+scanf("%d", &atributo);
 switch (atributo)
 {
 case 1:
-    printf("qual é a maior População\n");
+    printf("\n***Combate de População***\n");
 if (populacao1 > populacao2){
-    printf("%s x %s\n", pais1, pais2);
-    printf("Carta 1 - %s: %d VENCEU!!!\n", pais1, populacao1);
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %d de População\n CARTA 1 VENCEU!!!\n", pais2, populacao2);
+
 }
 else if (populacao1 < populacao2){
-    printf("%s x %s: %d\n", pais1, pais2, populacao2);
-    printf("Carta 2 - %s: %d VENCEU!!!\n", pais2, populacao2);
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %d de População\n CARTA 2 VENCEU!!!\n", pais2, populacao2);
 }
 else if (populacao1 == populacao2){ 
-    printf("EMPATE ENTRE CARTAS");
+    printf("EMPATE ENTRE CARTAS\n");
+}else{
+    printf("Opção inválida!\n");
+}
+break;
     
 }
-
-    }
-    
+case 2:
+    printf("\n***Combate de Área***\n");
+if (area1 > area2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de Área\n CARTA 1 VENCEU!!!\n", pais1, area1);
+}
+else if (area1 < area2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de Área\n CARTA 2 VENCEU!!!\n", pais2, area2);
+}
+else if (area1 == area2){
+    printf("EMPATE ENTRE CARTAS");
+}else{
+    printf("Opção inválida!\n");   
+}
+break;
+case 3:
+    printf("\n***Combate de PIB***\n");
+if (pib1 > pib2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de PIB\n CARTA 1 VENCEU!!!\n", pais1, pib1);
+}
+else if (pib1 < pib2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de PIB\n CARTA 2 VENCEU!!!\n", pais2, pib2);
+}
+else if (pib1 == pib2){
+    printf("EMPATE ENTRE CARTAS");
+}else{
+    printf("Opção inválida!\n");
+}
+break;
+case 4:
+    printf("\n***Combate de Pontos Turísticos***\n");
+if (turistico1 > turistico2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %d de Pontos Turísticos\n CARTA 1 VENCEU!!!\n", pais1, turistico1);
+}
+else if (turistico1 < turistico2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %d de Pontos Turísticos\n CARTA 2 VENCEU!!!\n", pais2, turistico2);
+}
+else if (turistico1 == turistico2){
+    printf("EMPATE ENTRE CARTAS");
+}else{
+    printf("Opção inválida!\n");
+}
+break;
+case 5:
+    printf("\n***Combate de Densidade Populacional***\n");
+if (densidade1 > densidade2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de Densidade Populacional\n CARTA 1 VENCEU!!!\n", pais1, densidade1);
+}
+else if (densidade1 < densidade2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de Densidade Populacional\n CARTA 2 VENCEU!!!\n", pais2, densidade2);
+}
+else if (densidade1 == densidade2){
+    printf("EMPATE ENTRE CARTAS");
+}else{
+    printf("Opção inválida!\n");
+}
     break;
+case 6:
+    printf("\n***Combate de PIB per Capita***\n");
+if (pibper1 > pibper2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de PIB per Capita\n CARTA 1 VENCEU!!!\n", pais1, pibper1);
+}
+else if (pibper1 < pibper2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de PIB per Capita\n CARTA 2 VENCEU!!!\n", pais2, pibper2);
+}
+else if (pibper1 == pibper2){
+    printf("EMPATE ENTRE CARTAS");
+}else{
+    printf("Opção inválida!\n");
+}
+    break;
+case 7:
+    printf("\n***Combate de Super Poder***\n");
+if (superPoder1 > superPoder2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de Super Poder\n CARTA 1 VENCEU!!!\n", pais1, superPoder1);
+}
+else if (superPoder1 < superPoder2){
+    printf("\n%s x %s\n", pais1, pais2);
+    printf("%s Com seus: %.2f de Super Poder\n CARTA 2 VENCEU!!!\n", pais2, superPoder2);
+}
+else if (superPoder1 == superPoder2){
+    printf("EMPATE ENTRE CARTAS");
+}else{
+    printf("Opção inválida!\n");
+}
+    break; 
 
 default:
+    printf("Opção inválida! Escolha um atributo de 1 a 7.\n");
     break;
 }
-
-
-        break;
-    
-    default:
-        break;
-    }
 
 
 
