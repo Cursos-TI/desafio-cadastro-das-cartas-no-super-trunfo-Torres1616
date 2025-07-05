@@ -180,7 +180,7 @@ int main() {
             printf("\n=== REGRAS DO SUPER TRUNFO ===\n");
             printf("1- Você irá cadastrar duas cartas representando cidades ou países.\n");
             printf("2- Cada carta contém os seguintes atributos:\n");
-            printf("1.População.\n 2.Área.\n 3.PIB.\n 4.PontosTurísticos.\n 5.DensidadePopulacional.\n 6.PIB per Capita.\n 7.Super Poder (combinação de todos os outros valores)\n");
+            printf(" 21.População.\n 2.Área.\n 3.PIB.\n 4.PontosTurísticos.\n 5.DensidadePopulacional.\n 6.PIB per Capita.\n 7.Super Poder (combinação de todos os outros valores)\n");
             printf("3- Após cadastrar as duas cartas, escolha um atributo para comparar e descobrir qual é a carta vencedora!\n");
             break;
         default:
